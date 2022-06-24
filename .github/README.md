@@ -22,7 +22,7 @@ Fork on [N3k0Ch4n](https://github.com/N3k0Ch4n/) cool af AwesomeWM dotfiles. I t
 
 <br>
 
-### How do I get this ❓
+### How Do I Get this?
 
 <br>
 
@@ -99,7 +99,7 @@ cp -rf .zshrc $HOME/
 
 <br>
 
-### For the keybind, uhm..
+### Some keybinds.
 
 | Keybinds    | Uses     |
 | ----------- | -------- |
@@ -117,7 +117,7 @@ cp -rf .zshrc $HOME/
 
 <br>
 
-### Improvement in the future
+### Improvements in the (near I hope) future
 
 - [ ] Somehow I screwed the powermenu buttons, fix that.  
 - [ ] Notifications enhancement
@@ -139,7 +139,7 @@ cp -rf .zshrc $HOME/
 - [Chris Titus Awesome Theme](https://github.com/ChrisTitusTech/titus-awesome)
 - And of course everyone on r/unixporn!
 
-### Million of Thanks to 
+### Millions of Thanks to 
 
 - [Saimoom/Harry](https://github.com/saimoomedits/dotfiles)
 - [Elenapan](https://github.com/elenapan/dotfiles)
