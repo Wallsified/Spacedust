@@ -1,6 +1,6 @@
-<h1 align='center'>
-  *The stars don't look bigger, but they do look brighter...*
-</h1>
+<h2 align='center'>
+  The stars don't look bigger, but they do look brighter...
+</h2>
 
 <br>
 
