@@ -1,28 +1,20 @@
-<p align='center'><img width="200px" src="https://github.com/N3k0Ch4n/Another_dotfiles/blob/main/conf/awesome/themes/pfp.jpg"></p>
-
 <h1 align='center'>
-  .Rice..
+  _The stars don't look bigger, but they do look brighter..._
 </h1>
 
-<img align='left' alt="GitHub Repo stars" src="https://img.shields.io/github/stars/N3k0Ch4n/Another_dotfiles?color=%23ffefd0&label=Stars&style=for-the-badge&labelColor=ffefd0">
-<img align='right' alt="GitHub last commit (branch)" src="https://img.shields.io/github/last-commit/N3k0Ch4n/Another_dotfiles/main?color=%2388aeda&label=Last Update%3F&style=for-the-badge&labelColor=88aeda">
-
 <br>
 
-<br>
+Fork on [N3k0Ch4n](https://github.com/N3k0Ch4n/) cool af AwesomeWM dotfiles. I twekead it using another palette and some other things for my personal usage. 
 
-<br>
+### The Setup :
 
-My personal & simple backup config rice
-> I'm using 1920x1080 screen resolution. Hope things goes perfectly fine for others..
-
-### My setup 🧰:
-
+- **OS** - Arco Linux
 - **WM**   - AwesomeWM
-- **Term**  -  URxvt
-- **Comp**  -  Picom
-
-Nothing special
+- **Term**  - Alacritty
+- **Comp**  - Picom
+- **Menu/Launcher/Window Switcher** - Rofi
+- **Shell** - Zsh w/ Powerlevel10k
+- **Browser** - Vivaldi 
 
 <br>
 
@@ -34,43 +26,46 @@ Nothing special
 
 <br>
 
-Well.. You just need to follow (or not) the following instructions given below
+For this one in particular you just need to follow (or not, cause why not after all?) the following instructions:
 
 **1. Install all the dependencies**
 
 <details close><summary>Pottential dependencies</summary>
   
   - [awesome-git](https://aur.archlinux.org/packages/awesome-git)
-  - [mpd-mpris](https://github.com/natsukagami/mpd-mpris)
-  - jq
   - inotify-tools
   - playerctl
   - brightnessctl
   - pulseaudio
   - network-manager
-  - rxvt-unicode
-  - mpd
-  - ncmpcpp
-  - [Material Design Icons](https://materialdesignicons.com/)
+  - JetBrains Font
+  - neofetch
+  - zsh
+  - alacritty
+  - cava
+  - betterlockscreen
+  - flameshot
+  - Vivaldi
+  - [powerlevel10k](https://github.com/romkatv/powerlevel10k)
+
 
 <br>
 
-And some others I dont remember 💀
-  
-I Promise I'll list all of them when I get the time, okay?
+And some others both me and the creator don't remember, for now, just give us some time. If you want to change the programs, check the apps.lua file!
+
   
 </details>
 
 ```sh
-sudo pacman -S jq inotify-tools playerctl brightnessctl pulseaudio networkmanager rxvt-unicode mpd ncmpcpp \
-alsa-utils alsa-plugins alsa-firmware mpc xclip base-devel pamixer
+sudo pacman -S alacritty cava inotify-tools playerctl brightnessctl pulseaudio networkmanager \
+alsa-utils alsa-plugins alsa-firmware xclip base-devel pamixer
 ```
 
 **2. Clone the repo**
 
 ```sh
-git clone https://github.com/N3k0Ch4n/Another_dotfiles.git
-cd Another_dotfiles/conf/
+git clone https://github.com/Wallsified/Spacedust.git
+cd Spacedust
 git submodule init
 git submodule update
 ```
@@ -78,48 +73,24 @@ git submodule update
 **3. Copy the config inside your config folder, in this case "$HOME/.config/"**
 
 ```sh
-cp -rf cava awesome mpd ncmpcpp picom $HOME/.config/
-cp -rf .Xresources .bashrc .vimrc .zshrc $HOME/
-cd ..; cp -rf misc/fonts/* $HOME/.local/share/fonts/
-fc-cache -v
-systemctl enable mpd.service; systemctl start mpd.service
+cp -rf awesome picom neofetch alacritty rofi cava $HOME/.config/
+cp -rf .zshrc $HOME/
+
 ```
+**4. Unzip the theme an apply it to Vivaldi**
 
-**4. Restart your system & Log in with awesomeWM**
+**5. Make a snapshot! Just in case**
 
-Ah yes, you need to change openweathermap id and your-place id in 'conf/awesome/signals/weather'
+**6. Restart your system & Log in with AwesomeWM**
 
-**5. You're done!**
-
-<br>
-
----
-
-<br>
-
-**Here's how it actually looks like:**
-
-<img src="https://i.redd.it/0wlag5bp0q491.png">
-
-<br>
-
-<details close>
-  <summary>Some more preview</summary>
-  
-  <h3>Sidebar</h3>
-  <img src="https://github.com/N3k0Ch4n/Another_dotfiles/blob/main/.github/sidebar.gif">
-  
-  <br>
-  
-  <h3>Volume/Brightness Popup</h3>
-  <img src="https://github.com/N3k0Ch4n/Another_dotfiles/blob/main/.github/pop.gif">
-  
-  <br>
-</details>
+**67. You're done!**
 
 <br>
 
 ---
+
+<br>
+
 
 <br>
 
@@ -127,16 +98,13 @@ Ah yes, you need to change openweathermap id and your-place id in 'conf/awesome/
 
 | Keybinds    | Uses     |
 | ----------- | -------- |
-| Mod + Enter | Terminal |
+| Mod + x     | Terminal |
 | Mod + Space | Layout   |
-| Mod + r     | Rofi      |
-| alt + c     | Sidebar  |
-| alt + x     | Powermenu|
+| Mod + r     | Rofi     |
+| Mod + q     | Close    |
+| Mod + s     | Powermenu|
 | Mod + Ctrl + n | Un-minimize |
-
-Pretty Simple, huh
-
-Just do not look at the keybind's awesome config. It's Messy..
+| Mod + F1    | Global Binds   |
 
 <br>
 
@@ -146,9 +114,12 @@ Just do not look at the keybind's awesome config. It's Messy..
 
 ### Improvement in the future
 
-- [ ] Dashboard ( working on it )
-- [x] Notifications enhancement
-- [ ] Code-Cleaning
+- [ ] Somehow I screwed the powermenu buttons, fix that.  
+- [ ] Notifications enhancement
+- [ ] Code-Cleaning (make it more first-contact-readable)
+- [ ] Better Menu (for clicking the awesome button)
+- [ ] Adapt the widgets for a better look.
+- [ ] Find a way the bar actually gets rounded borders
 
 <br>
 
@@ -156,7 +127,14 @@ Just do not look at the keybind's awesome config. It's Messy..
 
 <br>
 
-### Million of Thanks to 💕
+## Main Inspirations for this Proyect
+
+- [Gogh-Co Terminal Palletes](https://github.com/Gogh-Co/Gogh)
+- [N3k0Ch4n](https://github.com/N3k0Ch4n/)
+- [Chris Titus Awesome Theme](https://github.com/ChrisTitusTech/titus-awesome)
+- And of course everyone on r/unixporn!
+
+### Million of Thanks to 
 
 - [Saimoom/Harry](https://github.com/saimoomedits/dotfiles)
 - [Elenapan](https://github.com/elenapan/dotfiles)
@@ -165,6 +143,4 @@ Just do not look at the keybind's awesome config. It's Messy..
 
 <br>
 
-**And lastly.. To You Guys!**
-
-**Hope y'all have fun ricing and I wish you luck!**
+**Keep on Ricing, Act on Instinct!**

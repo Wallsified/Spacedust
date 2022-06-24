@@ -1,0 +1,143 @@
+configuration{
+    modi: "run,drun,window";
+    lines: 5;
+    font: "JetBrainsMono 10";
+    show-icons: true;
+    icon-theme: "Oreo-orange-black";
+    terminal: "st";
+    drun-display-format: "{icon} {name}";
+    window-display-format: "{icon} {name}";
+    location: 0;
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "    Launch This :  ";
+    display-run: "   Run Barry, Run!  ";
+    display-window: "  﩯  Window Switch:   ";
+    sidebar-mode: false;
+}
+
+* {
+    bg-col:  #0a1e24;
+    bg-col-light: #0a1e24;
+    border-col: #0a1e24;
+    selected-col: #ff8a3a;
+    blue: #002b36;
+    fg-col: #ff8a3a;
+    width: 450;
+    orange: #e35b00; 
+    orange2: #ff8a3a;
+}
+
+timeout {
+    delay: 10;
+    action: "kb-cancel";
+  }
+
+window {
+    height: 550px;
+    background-color: #EE000000;
+    padding: 15px;
+    border-radius: 15px;
+    border-color: #00000000;
+    location: center;
+}
+
+mainbox {
+    padding: 10;
+    background-color: #00000000;
+}
+
+inputbar {
+    children: [prompt,entry];
+    background-color: @bg-col;
+    border-radius: 15px;
+    padding: -5px 5px 10px 10px;
+    margin: 0px 0px 5px 0px;
+    border: 2px;
+    border-radius: 15px;
+    border-color: @orange;
+}
+
+prompt {
+    background-color: @orange2; 
+    padding: 6px;
+    text-color: @bg-col;
+    border-color: #e35b00;
+    border-radius: 15px;
+    margin: 20px 0px 0px 0px;   
+}
+
+entry {
+    placeholder: ":";
+    padding: 6px;
+    margin: 20px 0px 0px 5px;
+    background-color: @orange2;
+    border: 2px;
+    border-radius: 15px;
+}
+
+
+listview {
+    border: 2px;
+    border-radius: 15px;
+    border-color: @orange;
+    padding: 20px;
+    margin: 15px 0px 0px 0px;
+    columns: 1;
+    background-color: @bg-col;
+    scrollbar: false;
+    dynamic: true;
+}
+
+element {
+    margin: 10px 5px 0px 10px;
+    padding: 8px ;
+    border-radius: 15px;
+    background-color: @blue;
+    text-color: @fg-col;
+    //border: 1px;
+}
+
+element selected  normal {
+    background-color: @orange2;
+    text-color: @blue;
+}
+
+element selected active {
+    background-color: @orange2;
+    text-color: @blue;
+}
+
+element normal urgent {
+    background-color: @blue;
+}
+
+element-icon {
+    size: 20px;
+    padding: 10px;
+}
+
+
+mode-switcher {
+    background-color: @bg-col;
+    text-color: @fg-color;
+    padding: 10px;
+    margin: 20px 0px 0px 0px;
+    border-radius: 15px;
+    border: 2px;
+    border-color: @orange;
+}
+
+button {
+    padding: 10px;
+    background-color: @bg-color;
+    text-color: @grey;
+    vertical-align: 0.5; 
+    horizontal-align: 0.5;
+}
+
+button selected {
+  background-color: @bg-col;
+  text-color: @orange2;
+  // text-style: bold;
+}
