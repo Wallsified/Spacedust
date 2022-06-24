@@ -142,8 +142,8 @@ awesome.connect_signal("signal::volume", function(vol,mute)
 		popup.visible = true
 		name.markup = "volume"
 		progress.color = beautiful.blue
-
-		if mute or vol == 0 then
+		-- Fix tryout so it doesn't bugs on startup 
+		if mute == 1 or vol == 0 then
 			slide.target = 0
 			icon.markup = ""
 		else
