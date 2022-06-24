@@ -1,5 +1,5 @@
 <h1 align='center'>
-  _The stars don't look bigger, but they do look brighter..._
+  *The stars don't look bigger, but they do look brighter...*
 </h1>
 
 <br>
