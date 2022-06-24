@@ -83,7 +83,7 @@ cp -rf .zshrc $HOME/
 
 **6. Restart your system & Log in with AwesomeWM**
 
-**67. You're done!**
+**7. You're done!**
 
 <br>
 
@@ -91,6 +91,11 @@ cp -rf .zshrc $HOME/
 
 <br>
 
+**Here's how it actually looks like:**
+
+<img widht="300px" src="https://github.com/Wallsified/Spacedust/blob/main/.github/Full_Spacedust.jpg">
+
+---
 
 <br>
 
