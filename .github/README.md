@@ -7,7 +7,7 @@
 Fork on [N3k0Ch4n](https://github.com/N3k0Ch4n/) cool af AwesomeWM dotfiles. I twekead it using another palette and some other things for my personal usage. 
 The amazing wallpaper I used for this project can be apreciated in it's full glory [in here](https://old.reddit.com/r/vandwellers/comments/elcbri/living_out_of_a_uaz452_buhanka_in_georgia_the/)
 
-### The Setup :
+### The Setup:
 - **OS** - Arco Linux
 - **WM**   - AwesomeWM
 - **Term**  - Alacritty
@@ -79,7 +79,7 @@ cp -rf .zshrc $HOME/
 
 ---
 
-**Here's how it actually looks like:**
+## Here's how it actually looks like!
 
 <img widht="300px" src="https://github.com/Wallsified/Spacedust/blob/main/.github/Full_Spacedust.jpg">
 
@@ -116,6 +116,8 @@ cp -rf .zshrc $HOME/
 
 - The cake's still a lie. 
 
+---
+
 ### Improvements in the (near I hope) future
 
 - [ ] Somehow I screwed the powermenu buttons, fix that.  
@@ -137,6 +139,8 @@ cp -rf .zshrc $HOME/
 - [Catpuccin Community's Rofi Theme](https://github.com/catppuccin/rofi)
 - And of course everyone on r/unixporn!
 
+---
+
 ### Millions of Thanks to 
 
 - [Saimoom/Harry](https://github.com/saimoomedits/dotfiles)
@@ -146,4 +150,4 @@ cp -rf .zshrc $HOME/
 
 <br>
 
-## Keep on Ricing, Act on Instinct!**
+## Keep on Ricing, Act on Instinct!
