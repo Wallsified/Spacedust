@@ -1,3 +1,8 @@
+-- So, in this file is where we add all the keybinds we'll use in the window manager. 
+-- For the keyboard bindings, the default function goes like this: 
+-- awful.key({ possible_mod_key }, "key", function () awful.spawn(program.to.spawn) end, {description = "Program for Something", group = "Program Group"}),  
+-- Note that depending on what we need to launch, is the function we'll need. 
+
 local awful = require "awful"
 local hotkeys = require("awful.hotkeys_popup")
 local beautiful = require "beautiful"
@@ -17,7 +22,11 @@ local test_hkwidget = hotkeys.widget.new({
 modkey = "Mod4"
 alt = "Mod1"
 
---Aplications 
+
+-- Although you could add all keybinds in a parenthesis, is bettter to section them in function on what they do, so you can later find groups
+-- and so on easier. 
+
+--Aplications (remember apps.lua? Here we apply them. )
 awful.keyboard.append_global_keybindings({
     awful.key({ modkey }, "x", function () awful.spawn(apps.default.terminal) end, {description = "Terminal", group = "Applications"}),  
     awful.key({ modkey }, "r", function () awful.spawn(apps.default.rofi) end, {description = "Rofi Menu", group = "Applications"}),
@@ -33,7 +42,7 @@ awful.keyboard.append_global_keybindings({
     awful.key({ modkey, }, "Left",   awful.tag.viewprev, {description = "View Previous Workspace", group = "Workspace Manipulation"}),
     awful.key({ modkey, }, "Right",  awful.tag.viewnext, {description = "View Next Workspace", group = "Workspace Manipulation"}),
     awful.key({ modkey, }, "Escape", awful.tag.history.restore, {description = "go back", group = "Workspace Manipulation"}),
-    --Show Desktop          
+    --Show Desktop / Minimize everything for a bit          
     awful.key({modkey}, "d", function(c) if show_desktop then for _, c in ipairs(client.get()) do c:emit_signal("request::activate", "key.unminimize", 
         {raise = true}) end show_desktop = false else for _, c in ipairs(client.get()) do c.minimized = true end show_desktop = true end end, 
         {description = "Toggle Showing the Desktop", group = "Window Manipulation"}),
@@ -192,10 +201,8 @@ client.connect_signal("request::default_keybindings", function()
     })
 end)
 
--- Mouse bindings
---awful.mouse.append_global_mousebindings({
-  --  awful.button({ }, 3, function () mainmenu:toggle() end),
---})
+-- Mouse bindings. These work in a special way, mainly for the buttons. Button 1 on your mouse is standard click (left by default), button 3 is right-click. 
+-- Depending on how many buttons your mouse has you can use them in your favour for the window manager. 
 
 client.connect_signal("request::default_mousebindings", function()
     awful.mouse.append_client_mousebindings({

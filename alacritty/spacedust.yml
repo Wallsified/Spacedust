@@ -1,12 +1,13 @@
+# Spacedust theme for Alacritty. Original idea by Gogh-Co Terminal Palletes @ https://github.com/Gogh-Co/Gogh
 colors:
       # Default colors
       primary:
-        background: '#0a1e24'  #the blue one
-        foreground: '#ecf0c1' #clear one 
+        background: '#0a1e24' 
+        foreground: '#ecf0c1' 
 
       # Cursor colors
       cursor:
-        text: '#002b36' #second blue on comand
+        text: '#002b36' 
         cursor: '#839496' 
 
       # Normal colors
@@ -23,10 +24,10 @@ colors:
       # Bright colors
       bright:
         black: '#684c31' 
-        red: '#ff8a3a'  #for orange text
+        red: '#ff8a3a'  
         green: '#aecab8' 
         yellow: '#ffc878' 
-        blue: '#67a0ce' #for blue texts
+        blue: '#67a0ce' 
         magenta: '#ff8a3a' 
         cyan: '#83a7b4' 
         white: '#fefff1' 

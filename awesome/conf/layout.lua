@@ -1,3 +1,5 @@
+-- Here we add the layouts we'll use for our windows. Full layouts can be seen in the Awesome Documentation
+
 local awful = require "awful"
 local l = awful.layout.suit
 

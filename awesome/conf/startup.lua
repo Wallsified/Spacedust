@@ -1,3 +1,6 @@
+-- Here is where our actual startup begins. The idea is that wharever we defined on the run_on_startup function in
+-- apps.lua actually launches as well as we add our wallpaper on our screen(s). 
+
 local awful = require('awful')
 local apps = require('conf.apps')
 local beautiful = require("beautiful")

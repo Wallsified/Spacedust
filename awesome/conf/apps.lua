@@ -19,6 +19,7 @@ return {
   -- Here we define what we want to launch in our startup. It can be bash scripts, maybe an xrandr thing, pick your poison. 
   -- This is what the "run_on_startup" on startup.lua will detect to launch.  
   run_on_start_up = {
-    'picom --config ~/.config/picom/picom.conf'
+    'picom --config ~/.config/picom/picom.conf',
+    'numlockx on', -- enable numlock at startup
 }
 }

@@ -1,3 +1,8 @@
+-- In this file we add the colours and so on of variables that will make our design unique. 
+-- There's some names that are restricted for the window manager but you can create your own
+-- and later use them globally by using the "beautiful" library built in awesome. 
+-- We'll get to that later.  
+
 local theme_assets = require("beautiful.theme_assets")
 local xresources = require("beautiful.xresources")
 local rnotification = require("ruled.notification")
@@ -7,7 +12,7 @@ local themes_path = gfs.get_configuration_dir() .. "themes/"
 
 local theme = {}
 
------ Font -----
+----- Fonts -----
 
 theme.font = "JetBrains Mono Semibold 9"
 theme.font_name = "JetBrains Mono Semibold"
@@ -81,6 +86,7 @@ theme.hotkeys_label_bg = theme.blue_second
 
 
 theme.notification_margin = 11
+
 ----- Awesome Icon -----
 
 theme.awesome_icon = theme_assets.awesome_icon("25", theme.orange, theme.bar)
