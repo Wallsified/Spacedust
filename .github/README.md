@@ -77,6 +77,22 @@ cp -rf .zshrc $HOME/
 
 **7. You're done!**
 
+**8. (WIP) To install the VSCode/Codium theme to go along with the files do:**
+
+```sh
+vscodium --install-extension spacedust-0.0.1.vsix
+
+```
+or 
+
+```sh
+code --install-extension spacedust-0.0.1.vsix
+```
+I'm still working on it and understanding how to actually send it to the Visual Studio Code Marketplace but for now it kinda works doin it like that. 
+
+I also did [this repo](https://github.com/Wallsified/Spacedust-VSCode) for the theme itself. 
+Any help is always appreciated c:
+
 ---
 
 ## Here's how it actually looks like!
@@ -127,7 +143,7 @@ cp -rf .zshrc $HOME/
 - [ ] Adapt the widgets for a better look.
 - [ ] Find a way the bar actually gets rounded borders.
 - [ ] Maybe make a wiki or something so it's better for new-ricers.
-- [ ] VSCode/Codium theme to go with it.
+- [ ] VSCode/Codium theme to go with it. (Already On it!)
 
 ---
 
