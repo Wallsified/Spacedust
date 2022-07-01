@@ -1,5 +1,6 @@
 //Layout inspiration by the Catpuccin Community Rofi files. 
 
+//General configuration for your rofi setup
 configuration{
     modi: "run,drun,window";
     lines: 5;
@@ -18,6 +19,7 @@ configuration{
     sidebar-mode: false;
 }
 
+//Colors
 * {
     bg-col:  #0a1e24;
     bg-col-light: #0a1e24;
@@ -28,27 +30,31 @@ configuration{
     width: 450;
     orange: #e35b00; 
     orange2: #ff8a3a;
+    transparent: #00000000;
 }
 
+//For exiting rofi after some declared time. 
 timeout {
-    delay: 10;
+    delay: 5;
     action: "kb-cancel";
   }
 
+//Rofi's main window. 
 window {
-    height: 550px;
+    height: 530px;
     background-color: #EE000000;
     padding: 15px;
     border-radius: 15px;
-    border-color: #00000000;
+    border-color: @transparent;
     location: center;
 }
 
 mainbox {
     padding: 10;
-    background-color: #00000000;
+    background-color: @transparent;
 }
 
+//Configuration for prompt+entry window part
 inputbar {
     children: [prompt,entry];
     background-color: @bg-col;
@@ -60,25 +66,27 @@ inputbar {
     border-color: @orange;
 }
 
+//Configuration for the display box 
 prompt {
     background-color: @orange2; 
     padding: 6px;
     text-color: @bg-col;
-    border-color: #e35b00;
+    border-color: @orange;
     border-radius: 15px;
     margin: 20px 0px 0px 0px;   
 }
 
+//Configuration for bar where you type the command. Hence the "placeholder" line. 
 entry {
-    placeholder: ":";
+    placeholder: "Type here:";
     padding: 6px;
-    margin: 20px 0px 0px 5px;
+    margin: 20px 0px 0px 5px;    
     background-color: @orange2;
     border: 2px;
     border-radius: 15px;
 }
 
-
+//Configuration for the ways the row are shown
 listview {
     border: 2px;
     border-radius: 15px;
@@ -89,57 +97,48 @@ listview {
     background-color: @bg-col;
     scrollbar: false;
     dynamic: true;
+    cycle:true;
 }
 
+//Use this as an per-element configuration
 element {
     margin: 10px 5px 0px 10px;
     padding: 8px ;
     border-radius: 15px;
-    background-color: @blue;
-    text-color: @fg-col;
-    //border: 1px;
 }
 
-element selected  normal {
+//Configuration for the selected row
+element selected.normal {
     background-color: @orange2;
     text-color: @blue;
 }
 
-element selected active {
+//Configuration for the selected row + it's an active window
+element selected.active {
     background-color: @orange2;
     text-color: @blue;
 }
 
-element normal urgent {
-    background-color: @blue;
+//Configuration for non selected rows
+element normal.normal {
+	background-color: @blue;
+	text-color:       white;
 }
 
+//Configuration for next non selected row
+element alternate.normal {
+	background-color: @blue;
+	text-color:       white;
+}
+
+//Configuration for the next row + it's an active window
+element normal.active {
+	background-color: @blue;
+	text-color:       white;
+}
+
+//Icon configuration for the row
 element-icon {
     size: 20px;
     padding: 10px;
-}
-
-
-mode-switcher {
-    background-color: @bg-col;
-    text-color: @fg-color;
-    padding: 10px;
-    margin: 20px 0px 0px 0px;
-    border-radius: 15px;
-    border: 2px;
-    border-color: @orange;
-}
-
-button {
-    padding: 10px;
-    background-color: @bg-color;
-    text-color: @grey;
-    vertical-align: 0.5; 
-    horizontal-align: 0.5;
-}
-
-button selected {
-  background-color: @bg-col;
-  text-color: @orange2;
-  // text-style: bold;
 }

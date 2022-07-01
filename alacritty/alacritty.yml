@@ -14,16 +14,16 @@ font:
     style: Regular
 
   bold:
-    family: Iosevka Fixed
-    style: Bold
+    family: JetBrainsMono SemiBold
+    style: Regular
 
   italic:
-    family: Iosevka Fixed
+    family: JetBrainsMono 
     style: Italic
 
   bold_italic:
-    family: Iosevka Fixed
-    style: Bold Italic
+    family: JetBrainsMono SemiBold
+    style: SemiBold Italic
 
   size: 9
 

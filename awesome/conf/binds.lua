@@ -83,6 +83,7 @@ awful.keyboard.append_global_keybindings({
     awful.key({"Shift"}, "F2", function()  awful.spawn.with_shell("pamixer -d 5") end , {description = "Volume Down", group = "Media Control"}),
 	awful.key({ }, "XF86AudioMute", function() awful.spawn.with_shell("pamixer -t") end , {description = "Mute / Unmute", group = "Media Control"}), 
     awful.key({"Shift"}, "F1", function()  awful.spawn.with_shell("pamixer -t") end , {description = "Mute / Unmute", group = "Media Control"}),
+    awful.key({ }, "XF86AudioPlay", function()  awful.spawn.with_shell("playerctl play-pause") end , {description = "Play / Pause", group = "Media Control"}),
     awful.key({"Shift"}, "F9", function()  awful.spawn.with_shell("playerctl play-pause") end , {description = "Play / Pause", group = "Media Control"}),
     awful.key({ }, "XF86AudioNext", function()  awful.spawn.with_shell("playerctl next") end , {description = "Next", group = "Media Control"}),
     awful.key({"Shift"}, "F10", function()  awful.spawn.with_shell("playerctl next") end , {description = "Next", group = "Media Control"}),
