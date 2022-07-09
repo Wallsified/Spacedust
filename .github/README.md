@@ -35,6 +35,7 @@ Pottential dependencies
   - Pulseaudio
   - Network-Manager
   - JetBrains Font (both the official and patched version)
+  - Font Awesome (its in the files)
   - Neofetch
   - Zsh
   - Alacritty
@@ -99,7 +100,7 @@ I also did [this repo](https://github.com/Wallsified/Spacedust-VSCode) for the t
 
 ## Here's how it actually looks like!
 
-<img widht="300px" src="https://github.com/Wallsified/Spacedust/blob/main/.github/Full_Spacedust.jpg">
+<img widht="300px" src="https://github.com/Wallsified/Spacedust/blob/main/.github/Full_Spacedust.png">
 
 ---
 
@@ -123,7 +124,7 @@ I also did [this repo](https://github.com/Wallsified/Spacedust-VSCode) for the t
 - If you want to change the programs, check the apps.lua file!
 - There's a couple of easter eggs and silly things on what I like. Gotta catch 'em all!
 - My neofetch file has some extra variables for my hardware, just for looks mainly, but be sure to edit them so they apply to yours
-- The powermenu works (for now) better when pressing the keys rather than clicking the buttons. For this use them as follow: 
+- The powermenu works better when pressing the keys rather than clicking the buttons. For this use them as follow: 
 
   | Key         | Does     |
   | ----------- | -------- |
@@ -139,11 +140,9 @@ I also did [this repo](https://github.com/Wallsified/Spacedust-VSCode) for the t
 
 ## Improvements in the (near I hope) future
 
-- [ ] Somehow I screwed the powermenu buttons, fix that.  
 - [ ] Notifications enhancement (use dunst maybe?).
 - [ ] Code-Cleaning (make it more first-contact-readable).
 - [ ] Better Menu (for clicking the awesome button).
-- [ ] Adapt the widgets for a better look.
 - [ ] Find a way the bar actually gets rounded borders.
 - [ ] Maybe make a wiki or something so it's better for new-ricers.
 - [ ] VSCode/Codium theme to go with it. (Already On it!)
