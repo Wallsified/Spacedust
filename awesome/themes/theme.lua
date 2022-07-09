@@ -14,10 +14,10 @@ local theme = {}
 
 ----- Fonts -----
 
-theme.font = "JetBrains Mono Semibold 9"
+theme.font = "JetBrainsMono Semibold 9"
 theme.font_name = "JetBrains Mono Semibold"
 theme.font_size = "9"
-theme.icon_font = "JetBrains Mono Semibold 30"
+theme.icon_font = "Font Awesome 6 Free 10"
 theme.icon_font_size = "30"
 
 

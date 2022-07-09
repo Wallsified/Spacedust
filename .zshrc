@@ -45,7 +45,7 @@ CASE_SENSITIVE="true"
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-DISABLE_AUTO_TITLE="true"
+# DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 ENABLE_CORRECTION="true"
@@ -78,7 +78,7 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git)
-#DISABLE_AUTO_UPDATE=true
+DISABLE_AUTO_UPDATE=true
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -86,7 +86,7 @@ source $ZSH/oh-my-zsh.sh
 # export MANPATH="/usr/local/man:$MANPATH"
 
 # You may need to manually set your language environment
-export LANG=en_US.UTF-8
+# export LANG=en_US.UTF-8
 
 # Preferred editor for local and remote sessions
 # if [[ -n $SSH_CONNECTION ]]; then
@@ -111,10 +111,9 @@ alias cls='clear'
 neofetch --source astronaut --ascii_colors 1 1 1 1 1 1
 #alias s-touchpad='xinput set-prop "$(xinput list --name-only | grep -i touch)" "libinput Tapping Enabled" 1'
 #alias mon2work='xrandr --output HDMI-A-0 --mode 1920x1080 --scale 1x1 --right-of eDP'
-alias battery-check='auto-cpufreq --stats'
+#alias battery-check='auto-cpufreq --stats'
 source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 source ~/powerlevel10k/powerlevel10k.zsh-theme
-export PATH=$PATH:/home/walls/.spicetify

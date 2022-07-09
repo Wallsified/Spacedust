@@ -8,19 +8,19 @@ local rubato = require "lib.rubato"
 
 ----- Var -----
 
-width = dpi(250)
-height = dpi(150)
+width = dpi(300)
+height = dpi(120)
 
 ----- Skeleton -----
 
 local icon = wibox.widget {
-	font = beautiful.font_name .. " 30",
+	font = beautiful.icon_font .. " 22",
 	markup = "",
 	widget = wibox.widget.textbox,
 }
 
 local name = wibox.widget {
-	font = beautiful.font_name .. " 12",
+	font = beautiful.icon_font .. " 22",
 	--markup = "Volume",
 	widget = wibox.widget.textbox,
 }
@@ -77,8 +77,10 @@ local popup = awful.popup {
 	shape = function(cr,w,h)
 		gears.shape.rounded_rect(cr,w,h,10)
 	end,
-	--border_width = dpi(2),
-	--border_color = beautiful.orange2,
+	--the idea here is that the popup follows the focuses screen, but it just doesn't do it until you restart the wm. 
+	screen = awful.screen.focused ({client = true, mouse = false}),
+
+	hide_on_right_click = true,
 	widget = wibox.container.margin,
 }
 
@@ -147,13 +149,13 @@ awesome.connect_signal("signal::volume", function(vol,mute)
 
 		if mute == 1 or vol == 0 then
 			slide.target = 0
-			icon.markup = ""
+			icon.markup = ""
 		else
 			slide.target = vol
 			if vol >= 75 then
-				icon.markup = ""
+				icon.markup = "" 
 			else
-				icon.markup = ""
+				icon.markup = ""
 			end
 		end
 
@@ -178,7 +180,7 @@ awesome.connect_signal("signal::brightness", function(bri)
 		slide.target = bri
 		progress.color = beautiful.orange
 		--name.markup = "Brightness"
-		icon.markup = ""
+		icon.markup = ""
 
 		if popup.visible then
 			timeout:again()

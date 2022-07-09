@@ -41,7 +41,7 @@ local createButtons = function(icon, text, command)
 					{
 						markup = icon,
 						align = 'center',
-						font = "JetBrains Mono Semibold 40",
+						font = "Font Awesome 35",
 						widget = wibox.widget.textbox,
 					},
 					{
@@ -127,11 +127,11 @@ s.powermenu:buttons(gears.table.join(
 
 -- Test buttons goes here
 
-local poweroff = createButtons("", "Power Off", poweroff_command)
-local reboot = createButtons("", "Reboot", reboot_command)
-local end_session = createButtons ("", "End Session", exit_command)
-local suspend = createButtons("", "Suspend", suspend_command)
-local lock = createButtons("", "Lock", lock_command)
+local poweroff = createButtons("", "Power Off", poweroff_command)
+local reboot = createButtons("", "Reboot", reboot_command)
+local end_session = createButtons ("", "End Session", exit_command)
+local suspend = createButtons("", "Suspend", suspend_command)
+local lock = createButtons("", "Lock", lock_command)
 
 s.powermenu:setup {
 	nil,

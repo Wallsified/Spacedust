@@ -23,7 +23,8 @@ screen.connect_signal("request::desktop_decoration", function(s)
 	}
 
 	local icon = wibox.widget {
-		markup = "<span foreground='" .. beautiful.orange .. "'>  </span>",
+		font = beautiful.icon_font,
+		markup = "<span foreground='" .. beautiful.orange .. "'>  </span>",
 		widget = wibox.widget.textbox,
 	}
 
@@ -44,7 +45,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
 
 	local set_clock = function() -- Update the value of the clock
 		_ = os.date("%d %B %Y, %H:%M")
-		hour.markup = "<span foreground='" .. beautiful.magenta .. "'>" .. _ .. "</span>"
+		hour.markup = "<span foreground='" .. beautiful.orange .. "'>" .. _ .. "</span>"
 	end
 
 	local update_clock = gears.timer { -- Timer every 5 sec
@@ -56,27 +57,6 @@ screen.connect_signal("request::desktop_decoration", function(s)
 		end
 	}
 
-	-- layoutBox 
-	
-	local laybuttons = {
-		awful.button({ }, 1, function () awful.layout.inc( 1) end),
-      		awful.button({ }, 3, function () awful.layout.inc(-1) end),
-    		awful.button({ }, 4, function () awful.layout.inc( 1) end),
-        	awful.button({ }, 5, function () awful.layout.inc(-1) end),
-	}
-	
-	local layoutbox = wibox.widget {
-		{
-			{
-				buttons = laybuttons,
-				widget = awful.widget.layoutbox,
-			},
-			margins = { top = dpi(6), bottom = dpi(6), right = dpi(4), left = dpi(4) },
-			widget = wibox.container.margin,
-		},
-		bg = beautiful.bar,
-		widget = wibox.container.background,
-	}
 
 	-- Volume
 	
@@ -85,7 +65,8 @@ screen.connect_signal("request::desktop_decoration", function(s)
 			{
 				{
 					id = "vol_icon",
-					markup = "<span foreground='" .. beautiful.orange .. "'> </span>",
+					font = beautiful.icon_font,
+					markup = "<span foreground='" .. beautiful.orange .. "'></span>",
                 			widget = wibox.widget.textbox,
 				},
 				{
@@ -110,14 +91,15 @@ screen.connect_signal("request::desktop_decoration", function(s)
 		volume.container.vol_layout.value.markup = "<span foreground='" .. beautiful.orange .. "'>" .. vol .. "%</span>"
 
 		if mute or vol == 0 then
-			volume.container.vol_layout.vol_icon.markup = "<span foreground='" .. beautiful.orange .. "'> </span>"
+			volume.container.vol_layout.vol_icon.markup = "<span foreground='" .. beautiful.orange .. "'> </span>"
 		else
 			if tonumber(vol) > 50 then
-				volume.container.vol_layout.vol_icon.markup = "<span foreground='" .. beautiful.orange .. "'> </span>"
+				volume.container.vol_layout.vol_icon.markup = "<span foreground='" .. beautiful.orange .. "'>a</span>"
 			elseif tonumber(vol) >= 1 then
-				volume.container.vol_layout.vol_icon.markup = "<span foreground='" .. beautiful.orange .. "'> </span>"
+				volume.container.vol_layout.vol_icon.markup = "<span foreground='" .. beautiful.orange .. "'> </span>"
 			else
-				volume.container.vol_layout.vol_icon.markup = "<span foreground='" .. beautiful.orange .. "'> </span>"
+				--'> </
+				volume.container.vol_layout.vol_icon.markup = "<span foreground='" .. beautiful.orange .. "'> </span>"
 			end
 		end
 	end)
@@ -129,12 +111,13 @@ screen.connect_signal("request::desktop_decoration", function(s)
 			{
 				{
 					id = "bri_icon",
-                                        markup = "<span foreground='" .. beautiful.orange .. "'> </span>",
-                                        widget = wibox.widget.textbox
+                    font = beautiful.icon_font,
+					markup = "<span foreground='" .. beautiful.orange .. "'></span>",
+                    widget = wibox.widget.textbox
 				},
 				{
 					id = "value",
-					markup = "<span foreground='" .. beautiful.yellow .. "'> </span>",
+					markup = "<span foreground='" .. beautiful.yellow .. "'> </span>",
 					widget = wibox.widget.textbox
 				},
 				id = "bri_layout",
@@ -157,7 +140,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
 
 		bright.container.bri_layout.value.markup = "<span foreground='" .. beautiful.orange .. "'>" .. bri_val .."%</span>"
 
-		bright.container.bri_layout.bri_icon.markup = "<span foreground='" .. beautiful.orange .. "'>  </span>"
+		bright.container.bri_layout.bri_icon.markup = "<span foreground='" .. beautiful.orange .. "'>  </span>"
         end)
 
 	-- Wifi
@@ -167,7 +150,8 @@ screen.connect_signal("request::desktop_decoration", function(s)
                         {
                                 {
                                         id = "wifi_icon",
-                                        markup = "<span foreground='" .. beautiful.red .. "'> </span>",
+										font = beautiful.icon_font,
+                                        markup = "<span foreground='" .. beautiful.red .. "'> </span>",
                                         widget = wibox.widget.textbox
                                 },
 				{
@@ -175,7 +159,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
                                         markup = "<span foreground='" .. beautiful.red .. "'>   </span>",
                                         widget = wibox.widget.textbox
                                 },
-				spacing = dpi(4),
+								spacing = dpi(4),
                                 id = "wifi_layout",
                                 layout = wibox.layout.fixed.horizontal,
                         },
@@ -194,11 +178,11 @@ screen.connect_signal("request::desktop_decoration", function(s)
 		net_ssid = ssid:match(".[^:]+")
 
 		if not stat then
-			wifi.container.wifi_layout.wifi_icon.markup = "<span foreground='" .. beautiful.red .. "'</span>"
-			wifi.container.wifi_layout.ssid.markup = "<span foreground='" .. beautiful.red .. "'>".. net_ssid .."</span>"
+			wifi.container.wifi_layout.wifi_icon.markup = "<span foreground='" .. beautiful.orange .. "'> </span>"
+			wifi.container.wifi_layout.ssid.markup = "<span foreground='" .. beautiful.orange .. "'>".. net_ssid .."</span>"
 		else
-			wifi.container.wifi_layout.wifi_icon.markup = "<span foreground='" .. beautiful.green .. "'> </span>"
-			wifi.container.wifi_layout.ssid.markup = "<span foreground='" .. beautiful.green .. "'>".. net_ssid .."</span>"
+			wifi.container.wifi_layout.wifi_icon.markup = "<span foreground='" .. beautiful.orange .. "'> </span>"
+			wifi.container.wifi_layout.ssid.markup = "<span foreground='" .. beautiful.orange .. "'>".. net_ssid .."</span>"
 		end
 	end)
 
@@ -265,7 +249,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
 			layout = wibox.layout.fixed.horizontal,
 		},
 		style = {
-			font = beautiful.icon_font .. beautiful.icon_font_size,
+			font = beautiful.icon_font
 		},
 		buttons = taglist_buttons,
 		widget_template = {
@@ -287,22 +271,22 @@ screen.connect_signal("request::desktop_decoration", function(s)
 			create_callback = function(self, c3 , _) -- Launch this callback when first created it
 				
 				if c3.selected then
-					self:get_children_by_id('tag')[1].markup = "<span foreground='"..beautiful.red.."'></span>"
+					self:get_children_by_id('tag')[1].markup = "<span foreground='"..beautiful.orange.."'></span>"
 				elseif #c3:clients() == 0 then
-					self:get_children_by_id('tag')[1].markup = "<span foreground='"..beautiful.taglist_fg_empty.."'></span>"
+					self:get_children_by_id('tag')[1].markup = "<span foreground='"..beautiful.taglist_fg_empty.."'></span>"
 				else
-					self:get_children_by_id('tag')[1].markup = "<span foreground='"..beautiful.blue.."'></span>"
+					self:get_children_by_id('tag')[1].markup = "<span foreground='"..beautiful.blue.."'></span>"
 				end
 
 			end,
 			update_callback = function(self, c3, _) -- Update this callback when things changed ig....
 				
 				if c3.selected then
-                                        self:get_children_by_id('tag')[1].markup = "<span foreground='"..beautiful.red.."'></span>"
+                                        self:get_children_by_id('tag')[1].markup = "<span foreground='"..beautiful.orange.."'></span>"
                                 elseif #c3:clients() == 0 then
-                                        self:get_children_by_id('tag')[1].markup = "<span foreground='"..beautiful.taglist_fg_empty.."'></span>"
+                                        self:get_children_by_id('tag')[1].markup = "<span foreground='"..beautiful.taglist_fg_empty.."'></span>"
                                 else
-                                        self:get_children_by_id('tag')[1].markup = "<span foreground='"..beautiful.blue.."'></span>"
+                                        self:get_children_by_id('tag')[1].markup = "<span foreground='"..beautiful.blue.."'></span>"
                                 end
 			end,
 		},
@@ -330,7 +314,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
 		border_color = beautiful.orange2,
 		position = 'top',
 		width = s.geometry.width, -- dpi(200),
-		height = dpi(40),
+		height = dpi(42),
 		screen = s,
 		bg = beautiful.bar,
 		visible = true,
@@ -344,21 +328,19 @@ screen.connect_signal("request::desktop_decoration", function(s)
 		{--
 			{	launcher,
 				tag,
-				--music,
-				spacing = dpi(10),
+				spacing = dpi(15),
 				layout = wibox.layout.fixed.horizontal,
 			},
 			{
 				time,
-				--spacing = dpi(30),
+				spacing = dpi(30),
 				layout = wibox.layout.fixed.horizontal,
 			},
 			{
-				--time,
 				wifi,
 				volume,
 				bright,
-				spacing = dpi(20),
+				spacing = dpi(15),
 				layout = wibox.layout.fixed.horizontal,
 			},
 			layout = wibox.layout.align.horizontal,
