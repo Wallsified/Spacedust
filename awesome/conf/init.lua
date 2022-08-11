@@ -1,5 +1,4 @@
 -- This file works as an index-start (u get the idea right?) for the conf. folder. 
-
 local beautiful = require "beautiful"
 local gfs = require "gears.filesystem"
 

@@ -98,6 +98,8 @@ awful.keyboard.append_global_keybindings({
 awful.keyboard.append_global_keybindings({
 	awful.key({ }, "XF86MonBrightnessUp", function() awful.spawn.with_shell("brightnessctl set 5%+") end , {description = "Increase Brightness", group = "Brightness Control"}),
 	awful.key({ }, "XF86MonBrightnessDown", function() awful.spawn.with_shell("brightnessctl set 5%-") end , {description = "Decrease Brightness", group = "Brightness Control"}),
+    awful.key({alt}, "F11", function() awful.spawn.with_shell("brightnessctl set 5%-") end , {description = "Increase Brightness", group = "Brightness Control"}),
+    awful.key({alt}, "F12", function() awful.spawn.with_shell("brightnessctl set 5%+") end , {description = "Decrease Brightness", group = "Brightness Control"}),
 })
 
 

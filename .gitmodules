@@ -1,6 +1,7 @@
-#[submodule "conf/awesome/lib/bling"]
-#	path = conf/awesome/lib/bling
-#	url = https://github.com/BlingCorp/bling.git
-[submodule "conf/awesome/lib/rubato"]
-	path = conf/awesome/lib/rubato
+[submodule ".config/awesome/lib/rubato"]
+	path = .config/awesome/lib/rubato
 	url = https://github.com/andOrlando/rubato.git
+
+[submodule ".config/awesome/awesome-wm-widgets"]
+	path = .config/awesome/awesome-wm-widgets
+	url = https://github.com/streetturtle/awesome-wm-widgets.git

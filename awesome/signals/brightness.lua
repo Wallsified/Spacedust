@@ -24,10 +24,11 @@ local emit_brightness_info = function()
     awful.spawn.with_line_callback(brightness_script, {
         stdout = function(value)
             awful.spawn.with_line_callback(brightness_max, {
-            stdout = function(max)
-                percentage = tonumber(value)/tonumber(max) * 100
-                awesome.emit_signal("signal::brightness", percentage)
-            end})
+                stdout = function(max)
+                    percentage = tonumber(value) / tonumber(max) * 100
+                    awesome.emit_signal("signal::brightness", percentage)
+                end
+            })
         end
     })
 end
@@ -36,11 +37,11 @@ end
 emit_brightness_info()
 
 -- Kill old inotifywait process
-awful.spawn.easy_async_with_shell("ps x | grep \"inotifywait -e modify /sys/class/backlight\" | grep -v grep | awk '{print $1}' | xargs kill", function ()
-    -- Update brightness status with each line printed
-    awful.spawn.with_line_callback(brightness_subscribe_script, {
-        stdout = function(_)
-            emit_brightness_info()
-        end
-    })
-end)
+awful.spawn.easy_async_with_shell(
+    "ps x | grep \"inotifywait -e modify /sys/class/backlight\" | grep -v grep | awk '{print $1}' | xargs kill",
+    function()
+        -- Update brightness status with each line printed
+        awful.spawn.with_line_callback(brightness_subscribe_script, {
+            stdout = function(_) emit_brightness_info() end
+        })
+    end)
