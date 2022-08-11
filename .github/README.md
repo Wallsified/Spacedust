@@ -21,6 +21,15 @@ The amazing wallpaper I used for this project can be apreciated in it's full glo
 - **Candy Eye** - Cava, Neofetch, Pipes.sh
 ---
 
+## August 11 2022 Update: v3.2
+
+- Code is reformatted so it should be easier to read (not necessarilly to comprehend unfortunately).
+- Trying stuff with [Streetturtle](https://github.com/streetturtle/awesome-wm-widgets) widgets. Mainly the battery one for laptops.
+- Edited neofetch theme using TallJoes fetch as seen on [Chick2D's Neofetch Themes Repo](https://github.com/Chick2D/neofetch-themes).
+- Mostly of the bar is now clickable. Makes it easier to change some things on the go and more tweakable (like an equalizer).
+- Calendar doesn't shows Saturdays, weird but funny.
+---
+
 ## How Do I Get this?
 
 For this one in particular you just need to follow (or not, cause why not after all?) the following instructions:
@@ -43,14 +52,14 @@ Pottential dependencies
   - Betterlockscreen
   - Flameshot
   - Vivaldi
-  - Powerlevel10k
+  - Pavucontrol
 
 And some others both me and the creator don't remember, for now, just give us some time. 
   
 </details>
 
 ```sh
-sudo pacman -Syu alacritty cava inotify-tools playerctl brightnessctl pulseaudio networkmanager alsa-utils alsa-plugins alsa-firmware xclip base-devel pamixer flameshot vivaldi zsh-theme-powerlevel10k pipes.sh
+sudo pacman -Syu alacritty cava inotify-tools playerctl brightnessctl pulseaudio networkmanager alsa-utils alsa-plugins alsa-firmware xclip base-devel pamixer flameshot vivaldi pipes.sh nm-connection-editor pulseaudio-equalizer-gtk pavucontrol
 ```
 
 ```sh
