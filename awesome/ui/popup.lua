@@ -62,9 +62,9 @@ local slider = wibox.widget {
 
 -- slider's behavior (kinda)...
 
-slider:connect_signal("property::value", function(_, newValue)
-    awful.spawn.with_shell("amixer -D pulse set Master " .. newValue .. "%")
-end)
+-- slider:connect_signal("property::value", function(_, newValue)
+--  awful.spawn.with_shell("amixer -D pulse set Master " .. newValue .. "%")
+-- end)
 
 ----- The Popup ----- 
 
@@ -77,8 +77,7 @@ local popup = awful.popup {
     end,
     shape = function(cr, w, h) gears.shape.rounded_rect(cr, w, h, 10) end,
     -- the idea here is that the popup follows the focuses screen, but it just doesn't do it until you restart the wm. 
-    screen = awful.screen.focused({client = true, mouse = false}),
-
+    screen = awful.screen.focused({client = true, mouse = true}),
     hide_on_right_click = true,
     widget = wibox.container.margin
 }

@@ -110,10 +110,10 @@ source $ZSH/oh-my-zsh.sh
 alias cls='clear'
 neofetch --source astronaut --ascii_colors 1 1 1 1 1 1
 #alias s-touchpad='xinput set-prop "$(xinput list --name-only | grep -i touch)" "libinput Tapping Enabled" 1'
-#alias mon2work='xrandr --output HDMI-A-0 --mode 1920x1080 --scale 1x1 --right-of eDP'
-#alias battery-check='auto-cpufreq --stats'
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+alias ls='colorls -t --sd'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+source /usr/share/zsh-theme-powerlevel10k/powerlevel10k.zsh-theme
+#note, you gonna need to edit this. 
+export PATH=$PATH:/home/walls/.spicetify

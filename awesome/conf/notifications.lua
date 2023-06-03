@@ -44,7 +44,7 @@ naughty.config.presets.critical = {
 if _G.awesome.startup_errors then
     naughty.notify({
         preset = naughty.config.presets.critical,
-        title = '4x4 aint 12 mate. Check the startup',
+        title = ' 4x4 aint 12 mate. Check the startup',
         text = _G.awesome.startup_errors
     })
 end
@@ -57,7 +57,7 @@ do
 
         naughty.notify({
             preset = naughty.config.presets.critical,
-            title = "That's a Bad Kitty. Something went wrong.",
+            title = " That's a Bad Kitty. Something went wrong.",
             text = tostring(err)
         })
         in_error = false

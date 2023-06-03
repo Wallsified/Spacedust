@@ -1,0 +1,41 @@
+{
+  //Note: Configurations not listed are defaulted by omission.
+
+  /* General Configurations. */
+  "terminal.integrated.defaultProfile.linux": "zsh",
+  "explorer.confirmDelete": false,
+  "workbench.startupEditor": "none",
+  "workbench.enableExperiments": false,
+  "update.showReleaseNotes": false,
+  "files.autoSave": "afterDelay",
+
+  /* Editor Configs */
+  "editor.minimap.enabled": false,
+  "editor.scrollbar.vertical": "hidden",
+  "editor.overviewRulerBorder": false,
+  "editor.hideCursorInOverviewRuler": true,
+  "editor.tabSize": 1,
+  "editor.tabCompletion": "off",
+  "editor.glyphMargin": false,
+  "breadcrumbs.enabled": false,
+
+  /* Extensions */
+  "extensions.autoUpdate": false,
+  "redhat.telemetry.enabled": false,
+  "prettier.bracketSameLine": true,
+  "prettier.tabWidth": 2,
+
+  /* Aesthetics */
+  "workbench.colorTheme": "Spacedust",
+  "workbench.iconTheme": "eq-material-theme-icons-darker",
+
+  /* Language Configs */
+
+  "java.configuration.runtimes": [],
+
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "workbench.productIconTheme": "icons-octicons",
+
+}

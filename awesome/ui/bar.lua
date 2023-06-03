@@ -156,7 +156,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
                 "%</span>"
 
         bright.container.bri_layout.bri_icon.markup =
-            "<span foreground='" .. beautiful.orange .. "'>  </span>"
+            "<span foreground='" .. beautiful.orange .. "'>  </span>"
     end)
 
     -- Wifi
@@ -203,13 +203,13 @@ screen.connect_signal("request::desktop_decoration", function(s)
 
         if not stat then
             wifi.container.wifi_layout.wifi_icon.markup =
-                "<span foreground='" .. beautiful.orange .. "'> </span>"
+                "<span foreground='" .. beautiful.orange .. "'> </span>"
             wifi.container.wifi_layout.ssid.markup =
                 "<span foreground='" .. beautiful.orange .. "'>" .. net_ssid ..
                     "</span>"
         else
             wifi.container.wifi_layout.wifi_icon.markup =
-                "<span foreground='" .. beautiful.orange .. "'> </span>"
+                "<span foreground='" .. beautiful.orange .. "'> </span>"
             wifi.container.wifi_layout.ssid.markup =
                 "<span foreground='" .. beautiful.orange .. "'>" .. net_ssid ..
                     "</span>"

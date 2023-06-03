@@ -11,14 +11,13 @@ The amazing wallpaper I used for this project can be apreciated in it's full glo
 ---
 
 ## The Setup:
-- **OS** - Arco Linux
+- **OS** - Manjaro
 - **WM**   - AwesomeWM
 - **Term**  - Alacritty
 - **Comp**  - Picom
 - **Menu/Launcher/Window Switcher** - Rofi
-- **Shell** - Zsh+Powerlevel10k
+- **Shell** - Zsh+Powerlevel10k+Colorls
 - **Browser** - Vivaldi 
-- **Candy Eye** - Cava, Neofetch, Pipes.sh
 ---
 
 ## August 11 2022 Update: v3.2
@@ -48,11 +47,11 @@ Pottential dependencies
   - Neofetch
   - Zsh
   - Alacritty
-  - Cava
   - Betterlockscreen
   - Flameshot
   - Vivaldi
   - Pavucontrol
+  - Spicetify
 
 And some others both me and the creator don't remember, for now, just give us some time. 
   
@@ -66,6 +65,8 @@ sudo pacman -Syu alacritty cava inotify-tools playerctl brightnessctl pulseaudio
 yay awesome-git nerd-fonts-jetbrains-mono ttf-jetbrains-mono 
 ```
 
+For specifics like spicetify, its better to follow the official installion guide and then aplying the modifications.
+
 **2. Clone the repo**
 
 ```sh
@@ -78,19 +79,13 @@ git submodule update
 **3. Copy the config inside your config folder, in this case "$HOME/.config/"**
 
 ```sh
-cp -rf awesome picom neofetch alacritty rofi cava $HOME/.config/
+cp -rf awesome picom neofetch alacritty rofi colorls $HOME/.config/
 cp -rf .zshrc $HOME/
-
 ```
+
 **4. Unzip the theme an apply it to Vivaldi.**
 
-**5. Make a snapshot! Just in case.**
-
-**6. Restart your system & log in with AwesomeWM.**
-
-**7. You're done!**
-
-**8. (WIP) To install the VSCode/Codium theme to go along with the files do:**
+**5. To install the VSCode/Codium theme to go along with the files do:**
 
 ```sh
 vscodium --install-extension spacedust-0.0.1.vsix
@@ -101,15 +96,34 @@ or
 ```sh
 code --install-extension spacedust-0.0.1.vsix
 ```
+
+And then change the settings.json file provided.  
+
 I'm still working on it and understanding how to actually send it to the Visual Studio Code Marketplace but for now it kinda works doin it like that. 
 
 I also did [this repo](https://github.com/Wallsified/Spacedust-VSCode) for the theme itself. Any help is always appreciated c:
 
 ---
 
+**6. Install Spicetify the official way with the Dribbblish theme. Then change the provided files.**
+
+**7. For the DuckDuckGo theme, go on Configuration/Themes/Load Settings and write "lettherebespacedust".**
+
+**8. Restart your system & log in with AwesomeWM.**
+
+**9. You're done!**
+
+
 ## Here's how it actually looks like!
 
-<img widht="300px" src="https://github.com/Wallsified/Spacedust/blob/main/.github/Full_Spacedust.png">
+<img widht="300px" src="https://github.com/Wallsified/Spacedust/blob/main/.github/Spacedustv3.2_a.png">
+<img widht="300px" src="https://github.com/Wallsified/Spacedust/blob/main/.github/Spacedustv3.2_b.png">
+<img widht="300px" src="https://github.com/Wallsified/Spacedust/blob/main/.github/Spacedustv3.2_c.png">
+<img widht="300px" src="https://github.com/Wallsified/Spacedust/blob/main/.github/Spacedustv3.2_d.png">
+<img widht="300px" src="https://github.com/Wallsified/Spacedust/blob/main/.github/Spacedustv3.2_e.png">
+<img widht="300px" src="https://github.com/Wallsified/Spacedust/blob/main/.github/Spacedustv3.2_f.png">
+
+
 
 ---
 
@@ -154,7 +168,6 @@ I also did [this repo](https://github.com/Wallsified/Spacedust-VSCode) for the t
 - [ ] Better Menu (for clicking the awesome button).
 - [ ] Find a way the bar actually gets rounded borders.
 - [ ] Maybe make a wiki or something so it's better for new-ricers.
-- [ ] VSCode/Codium theme to go with it. (Already On it!)
 
 ---
 
@@ -178,4 +191,3 @@ I also did [this repo](https://github.com/Wallsified/Spacedust-VSCode) for the t
 
 <br>
 
-## Keep on Ricing, Act on Instinct!

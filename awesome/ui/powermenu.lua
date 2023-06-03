@@ -112,8 +112,8 @@ local p = function(s)
     local poweroff = createButtons("", "Power Off", poweroff_command)
     local reboot = createButtons("", "Reboot", reboot_command)
     local end_session = createButtons("", "End Session", exit_command)
-    local suspend = createButtons("", "Suspend", suspend_command)
-    local lock = createButtons("", "Lock", lock_command)
+    local suspend = createButtons("", "Suspend", suspend_command)
+    local lock = createButtons("", "Lock", lock_command)
 
     s.powermenu:setup{
         nil,
@@ -185,3 +185,4 @@ awesome.connect_signal("ui::powermenu:hide", function()
     p_grabber:stop()
     for s in screen do s.powermenu.visible = false end
 end)
+
