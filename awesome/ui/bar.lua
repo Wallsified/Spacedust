@@ -5,8 +5,10 @@ local wibox = require("wibox")
 local beautiful = require("beautiful")
 local dpi = beautiful.xresources.apply_dpi
 local awm_icon = beautiful.awesome_icon
-local battery_widget = require("awesome-wm-widgets.battery-widget.battery")
+local batteryarc_widget = require(
+                              "awesome-wm-widgets.batteryarc-widget.batteryarc")
 local calendar_widget = require("awesome-wm-widgets.calendar-widget.calendar")
+local spotify_widget = require("awesome-wm-widgets.spotify-widget.spotify")
 
 ----- Bar -----
 
@@ -162,6 +164,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
     -- Wifi
 
     local wifi = wibox.widget {
+
         {
             {
                 {
@@ -187,9 +190,8 @@ screen.connect_signal("request::desktop_decoration", function(s)
         },
         -- shape = function(cr,w,h) gears.shape.rounded_rect(cr,w,h,5) end,
         buttons = {
-            awful.button({}, 1,
-                         function()
-                awful.spawn("nm-connection-editor")
+            awful.button({}, 1, function()
+                awful.spawn("alacritty -e nmtui")
             end)
         },
         bg = beautiful.bar,
@@ -292,7 +294,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
     local tag = wibox.widget {
         {
             {tags, layout = wibox.layout.fixed.horizontal},
-            margins = {left = dpi(5), right = dpi(5)},
+            margins = {left = dpi(4), right = dpi(4)},
             widget = wibox.container.margin
         },
         bg = beautiful.bar,
@@ -305,7 +307,7 @@ screen.connect_signal("request::desktop_decoration", function(s)
         border_width = 2,
         border_color = beautiful.orange2,
         position = 'top',
-        width = s.geometry.width, -- dpi(200),
+        width = s.geometry.width,
         height = dpi(42),
         screen = s,
         bg = beautiful.bar,
@@ -321,17 +323,46 @@ screen.connect_signal("request::desktop_decoration", function(s)
             {
                 launcher,
                 tag,
-                spacing = dpi(15),
+                spacing = dpi(10),
                 layout = wibox.layout.fixed.horizontal
             },
 
-            {time, spacing = dpi(30), layout = wibox.layout.fixed.horizontal},
+            {
+                time,
+                spotify_widget({
+                    main_color = beautiful.orange,
+                    bg_color = beautiful.fg,
+                    font = "JetBrainsMono Semibold 9",
+                    max_length = 50,
+                    dim_when_paused = true,
+                    dim_opacity = 0.5,
+                    play_icon = gfs.get_configuration_dir() ..
+                        "themes/hyphen.png",
+                    pause_icon = gfs.get_configuration_dir() ..
+                        "themes/hyphen.png"
+                }),
+                spacing = dpi(10),
+                layout = wibox.layout.fixed.horizontal,
+                placement = centered_horizontal
+            },
 
             {
+
                 wifi,
                 volume,
                 bright,
-                battery_widget(),
+                batteryarc_widget({
+                    charging_color = beautiful.transparent,
+                    low_level_color = beautiful.transparent,
+                    medium_level_color = beautiful.transparent,
+                    arc_thickness = 2,
+                    show_current_level = true,
+                    size = 22,
+                    main_color = beautiful.orange,
+                    font = "JetBrainsMono Semibold 7",
+                    bg_color = beautiful.orange
+
+                }),
                 spacing = dpi(15),
                 layout = wibox.layout.fixed.horizontal
             },

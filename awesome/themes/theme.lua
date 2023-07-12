@@ -43,7 +43,7 @@ theme.bg_urgent = theme.blue_main
 theme.bg_minimize = theme.blue_main
 theme.bg_systray = theme.blue_main
 
-theme.fg_normal = "#c0caf5"
+theme.fg_normal = "#ff8a3a"
 theme.fg_focus = theme.fg_normal
 theme.fg_urgent = theme.fg_normal
 theme.fg_minimize = theme.fg_normal
@@ -55,7 +55,7 @@ theme.useless_gap = dpi(10)
 theme.bar = theme.blue_main
 theme.bar_alt = "#212331"
 
-theme.border_width = dpi(2)
+theme.border_width = dpi(1.8)
 theme.border_normal = theme.bg_normal
 theme.border_focus = theme.orange2
 

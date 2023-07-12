@@ -78,7 +78,7 @@ local calendar = awful.popup {
     widget = {
         widget = wibox.container.margin,
         font = beautiful.font,
-        margins = dpi(7),
+        margins = dpi(10),
         calendar_widget
     },
     bg = beautiful.bg_normal,
@@ -90,7 +90,7 @@ local calendar = awful.popup {
     end,
     shape = gears.shape.rounded_rect,
     ontop = true,
-    hide_on_right_click = true
+    hide_on_right_click = false
 }
 
 local current_month = os.date("*t").month
